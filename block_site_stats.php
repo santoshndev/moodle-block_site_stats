@@ -21,30 +21,28 @@
  * @copyright  2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-defined('MOODLE_INTERNAL') || die();
-
 class block_site_stats extends block_base {
     /**
      * Sets the block title
-    */
+     */
     public function init() {
         $this->title = get_string('pluginname', 'block_site_stats');
     }
     /**
      * Allow/Deny multiple block instances
-    */
+     */
     public function instance_allow_multiple() {
         return false;
     }
     /**
      * Defines block applicable formats
-    */
+     */
     public function applicable_formats() {
         return ['my' => true];
     }
     /**
      * Get the blocks visible content
-    */
+     */
     public function get_content() {
         if (!has_capability('block/site_stats:view', context_system::instance())) {
             return '';

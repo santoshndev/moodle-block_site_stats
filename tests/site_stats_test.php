@@ -51,8 +51,6 @@ class site_stats_test extends advanced_testcase {
         $block = new block_site_stats();
 
         $this->assertTrue($block->can_block_be_added($page));
-
-
         // Test whether admin can add block on frontpage.
         $page->set_pagelayout('frontpage');
 

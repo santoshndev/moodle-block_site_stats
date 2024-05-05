@@ -14,6 +14,9 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+namespace block_site_stats;
+
+use cache;
 /**
  * The observer class needed by the site stats block.
  *
@@ -21,15 +24,11 @@
  * @copyright  2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace block_site_stats;
-
-use cache;
-
 class observer {
 
     /**
      * Clears userscount cache on user_created event
-    */
+     */
     public static function user_created($event) {
         $cache = cache::make('block_site_stats', 'sitestats');
         $cache->delete('userscount');

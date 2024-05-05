@@ -14,6 +14,9 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+namespace block_site_stats\task;
+
+use cache;
 /**
  * Calculates the disk usage
  *
@@ -21,13 +24,6 @@
  * @copyright 2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-namespace block_site_stats\task;
-
-defined('MOODLE_INTERNAL') || die();
-
-use cache;
-
 class diskusage extends \core\task\scheduled_task {
 
     /**

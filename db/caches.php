@@ -26,6 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 
 $definitions = [
     'sitestats' => [
-        'mode' => cache_store::MODE_APPLICATION
+        'mode' => cache_store::MODE_APPLICATION,
     ],
 ];

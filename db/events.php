@@ -21,31 +21,31 @@
  * @copyright  2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
+defined('MOODLE_INTERNAL') || die();
 // List of observers.
-$observers = array(
-    array(
+$observers = [
+    [
         'eventname' => '\core\event\user_created',
         'callback' => '\block_site_stats\observer::user_created',
-    ),
-    array(
+    ],
+    [
         'eventname' => '\core\event\user_deleted',
         'callback' => '\block_site_stats\observer::user_deleted',
-    ),
-    array(
+    ],
+    [
         'eventname' => '\core\event\course_deleted',
         'callback' => '\block_site_stats\observer::course_deleted',
-    ),
-    array(
+    ],
+    [
         'eventname' => '\core\event\course_created',
         'callback' => '\block_site_stats\observer::course_created',
-    ),
-    array(
+    ],
+    [
         'eventname' => '\core\event\course_module_created',
         'callback' => '\block_site_stats\observer::module_created',
-    ),
-    array(
+    ],
+    [
         'eventname' => '\core\event\course_module_deleted',
         'callback' => '\block_site_stats\observer::module_deleted',
-    ),
-);
+    ],
+];

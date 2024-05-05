@@ -14,6 +14,10 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+namespace block_site_stats\output;
+
+use moodle_url;
+use renderer_base;
 /**
  * Class containing data for Site Statistics block.
  *
@@ -21,18 +25,16 @@
  * @copyright  2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace block_site_stats\output;
-defined('MOODLE_INTERNAL') || die();
-
-use moodle_url;
-use renderer_base;
-
 class main implements \templatable, \renderable {
+    /**
+     * Assign cache instance
+     * @var cache_application|cache_session|cache_store Cache instance
+     */
     private $cache;
 
     /**
      * Constructor
-    */
+     */
     public function __construct() {
         $this->cache = \cache::make('block_site_stats', 'sitestats');
     }
@@ -53,7 +55,7 @@ class main implements \templatable, \renderable {
     /**
      * Get the total count of courses
      * @return int count of courses
-    */
+     */
     public function get_courses_count() {
         global $DB;
         $coursescountcache = $this->cache->get('coursescount');

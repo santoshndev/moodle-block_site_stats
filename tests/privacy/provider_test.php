@@ -14,6 +14,8 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 namespace block_site_stats\privacy;
+
+use advanced_testcase;
 /**
  * PHPUnit block_site_stats tests
  *
@@ -21,14 +23,12 @@ namespace block_site_stats\privacy;
  * @category   test
  * @copyright  2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @coversDefaultClass \block_site_stats\privacy\provider
+ * @covers \block_site_stats\privacy\provider
  */
-use advanced_testcase;
-
 class provider_test extends advanced_testcase {
     /**
      * Ensures test_get_reason() returns correct data
-    */
+     */
     public function test_get_reason() {
         $this->resetAfterTest();
         $this->setAdminUser();

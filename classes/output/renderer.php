@@ -14,6 +14,9 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+namespace block_site_stats\output;
+
+use plugin_renderer_base;
 /**
  * site stats block renderer
  *
@@ -21,11 +24,6 @@
  * @copyright  2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace block_site_stats\output;
-defined('MOODLE_INTERNAL') || die;
-
-use plugin_renderer_base;
-
 class renderer extends plugin_renderer_base {
 
     /**
