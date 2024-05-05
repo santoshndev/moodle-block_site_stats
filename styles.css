@@ -1,0 +1,5 @@
+@media (min-width: 840px) {
+    .block_site_stats .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        width: calc(25% - 0.5rem);
+    }
+}

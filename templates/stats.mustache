@@ -1,0 +1,64 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template block_site_stats/stats
+
+    This template renders site statistics
+
+    Example context (json):
+    {
+        "userurl": "http://example.com/admin/user.php",
+        "userscount": 100,
+        "courseurl": "http://example.com/course/index.php",
+        "coursescount": 30,
+        "activityurl": "http://example.com/admin/modules.php",
+        "activitiescount": 200,
+        "diskusage": "10 GB"
+    }
+}}
+<div id="block-site-stats-{{uniqid}}">
+    <div class="card-deck dashboard-card-deck">
+        <div class="card dashboard-card mb-1">
+            <div class="card-body text-center">
+                <i class="fa fa-users fa-2x"></i>
+                <h5>{{#str}}users, block_site_stats{{/str}}</h5>
+                <a href="{{userurl}}"><h4>{{userscount}}</h4></a>
+            </div>
+        </div>
+        <div class="card dashboard-card mb-1">
+            <div class="card-body text-center">
+                <i class="fa fa-book fa-2x"></i>
+                <h5>{{#str}}courses, block_site_stats{{/str}}</h5>
+                <a href="{{courseurl}}"><h4>{{coursescount}}</h4></a>
+            </div>
+        </div>
+        <div class="card dashboard-card mb-1">
+            <div class="card-body text-center">
+                <i class="fa fa-tasks fa-2x"></i>
+                <h5>{{#str}}activities, block_site_stats{{/str}}</h5>
+                <a href="{{activityurl}}"><h4>{{activitiescount}}</h4></a>
+            </div>
+        </div>
+        <div class="card dashboard-card mb-1">
+            <div class="card-body text-center">
+                <i class="fa fa-hdd-o fa-2x"></i>
+                <h5>{{#str}}diskusage, block_site_stats{{/str}}</h5>
+                <h4>{{diskusage}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
