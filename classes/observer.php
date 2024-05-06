@@ -28,6 +28,7 @@ class observer {
 
     /**
      * Clears userscount cache on user_created event
+     * @param \core\event\user_created $event event object
      */
     public static function user_created($event) {
         $cache = cache::make('block_site_stats', 'sitestats');
@@ -35,6 +36,7 @@ class observer {
     }
     /**
      * Clears userscount cache on user_deleted event
+     * @param \core\event\user_deleted $event event object
      */
     public static function user_deleted($event) {
         $cache = cache::make('block_site_stats', 'sitestats');
@@ -42,6 +44,7 @@ class observer {
     }
     /**
      * Clears coursescount cache on course_created event
+     * @param \core\event\course_created $event event object
      */
     public static function course_created($event) {
         $cache = cache::make('block_site_stats', 'sitestats');
@@ -49,6 +52,7 @@ class observer {
     }
     /**
      * Clears coursescount cache on course_deleted event
+     * @param \core\event\course_deleted $event event object
      */
     public static function course_deleted($event) {
         $cache = cache::make('block_site_stats', 'sitestats');
@@ -56,6 +60,7 @@ class observer {
     }
     /**
      * Clears activitiescount cache on course_module_created event
+     * @param \core\event\course_module_created $event event object
      */
     public static function module_created($event) {
         $cache = cache::make('block_site_stats', 'sitestats');
@@ -63,6 +68,7 @@ class observer {
     }
     /**
      * Clears activitiescount cache on course_module_deleted event
+     * @param \core\event\course_module_deleted $event event object
      */
     public static function module_deleted($event) {
         $cache = cache::make('block_site_stats', 'sitestats');

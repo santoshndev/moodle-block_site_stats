@@ -102,6 +102,9 @@ class main implements \templatable, \renderable {
     }
     /**
      * Export the data for template
+     * @param renderer_base $output
+     * @return array Context variables for the template
+     * @throws \coding_exception
      */
     public function export_for_template(renderer_base $output) {
         $userurl = new moodle_url('/admin/user.php');
