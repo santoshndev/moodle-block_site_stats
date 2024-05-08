@@ -4,5 +4,6 @@
     }
 }
 #block-region-side-pre .block_site_stats .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
-    width: calc(100% - 0.5rem) !important;
+    width: calc(100% - 0.5rem);
+    flex-basis: auto;
 }
