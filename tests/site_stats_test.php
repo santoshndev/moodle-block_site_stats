@@ -27,7 +27,11 @@ use context_system;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @coversDefaultClass \block_site_stats
  */
-class site_stats_test extends advanced_testcase {
+final class site_stats_test extends advanced_testcase {
+    /**
+     * Include required files before class.
+     * @return void
+     */
     public static function setUpBeforeClass(): void {
         require_once(__DIR__ . '/../../moodleblock.class.php');
         require_once(__DIR__ . '/../block_site_stats.php');

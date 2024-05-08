@@ -36,21 +36,24 @@
             <div class="card-body text-center">
                 <i class="fa fa-users fa-2x"></i>
                 <h5>{{#str}}users, block_site_stats{{/str}}</h5>
-                <a href="{{userurl}}"><h4>{{userscount}}</h4></a>
+                {{#userurl}}<a href="{{userurl}}"><h4>{{userscount}}</h4></a>{{/userurl}}
+                {{^userurl}}<h4>{{userscount}}</h4>{{/userurl}}
             </div>
         </div>
         <div class="card dashboard-card mb-1">
             <div class="card-body text-center">
                 <i class="fa fa-book fa-2x"></i>
                 <h5>{{#str}}courses, block_site_stats{{/str}}</h5>
-                <a href="{{courseurl}}"><h4>{{coursescount}}</h4></a>
+                {{#courseurl}}<a href="{{courseurl}}"><h4>{{coursescount}}</h4></a>{{/courseurl}}
+                {{^courseurl}}<h4>{{coursescount}}</h4>{{/courseurl}}
             </div>
         </div>
         <div class="card dashboard-card mb-1">
             <div class="card-body text-center">
                 <i class="fa fa-tasks fa-2x"></i>
                 <h5>{{#str}}activities, block_site_stats{{/str}}</h5>
-                <a href="{{activityurl}}"><h4>{{activitiescount}}</h4></a>
+                {{#activityurl}}<a href="{{activityurl}}"><h4>{{activitiescount}}</h4></a>{{/activityurl}}
+                {{^activityurl}}<h4>{{activitiescount}}</h4>{{/activityurl}}
             </div>
         </div>
         <div class="card dashboard-card mb-1">

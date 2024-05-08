@@ -18,6 +18,7 @@ namespace block_site_stats\output;
 
 use moodle_url;
 use renderer_base;
+use context_system;
 /**
  * Class containing data for Site Statistics block.
  *
@@ -107,6 +108,7 @@ class main implements \templatable, \renderable {
      * @throws \coding_exception
      */
     public function export_for_template(renderer_base $output) {
+        $sitecontext = context_system::instance();
         $userurl = new moodle_url('/admin/user.php');
         $courseurl = new moodle_url('/course/index.php');
         $activityurl = new moodle_url('/admin/modules.php');
@@ -115,9 +117,9 @@ class main implements \templatable, \renderable {
             'coursescount' => $this->get_courses_count(),
             'activitiescount' => $this->get_activities_count(),
             'diskusage' => $this->get_disk_usage(),
-            'userurl' => $userurl->out(),
-            'courseurl' => $courseurl->out(),
-            'activityurl' => $activityurl->out(),
+            'userurl' => has_capability('moodle/user:update', $sitecontext) ? $userurl->out() : '',
+            'courseurl' => has_capability('moodle/course:update', $sitecontext) ? $courseurl->out() : '',
+            'activityurl' => has_capability('moodle/site:config', $sitecontext) ? $activityurl->out() : '',
         ];
         return $templatecontext;
     }

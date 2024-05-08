@@ -3,3 +3,6 @@
         width: calc(25% - 0.5rem);
     }
 }
+#block-region-side-pre .block_site_stats .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+    width: calc(100% - 0.5rem) !important;
+}

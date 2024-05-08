@@ -15,6 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 namespace block_site_stats\output;
 
+use advanced_testcase;
 use block_site_stats\task\diskusage;
 /**
  * PHPUnit block_site_stats tests
@@ -25,7 +26,7 @@ use block_site_stats\task\diskusage;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @covers \block_site_stats\output\main
  */
-class main_test extends \advanced_testcase {
+final class main_test extends advanced_testcase {
     /**
      * Assigns the main class instance
      * @var main main class instance
@@ -33,6 +34,7 @@ class main_test extends \advanced_testcase {
     private $main;
     /**
      * Initial Setup
+     * @return void
      */
     public function setUp(): void {
         $this->resetAfterTest();
@@ -41,8 +43,9 @@ class main_test extends \advanced_testcase {
     }
     /**
      * Ensures get_users_count() returns correct data
+     * @return void
      */
-    public function test_get_users_count() {
+    public function test_get_users_count(): void {
         // Test when new users are not created.
         $usercount = $this->main->get_users_count();
         $this->assertEquals(1, $usercount);
@@ -56,8 +59,9 @@ class main_test extends \advanced_testcase {
     }
     /**
      * Ensures get_courses_count() returns correct data
+     * @return void
      */
-    public function test_get_courses_count() {
+    public function test_get_courses_count(): void {
         // Test when no courses created.
         $coursecount = $this->main->get_courses_count();
         $this->assertEquals(0, $coursecount);
@@ -70,8 +74,9 @@ class main_test extends \advanced_testcase {
     }
     /**
      * Ensures get_activities_count() returns correct data
+     * @return void
      */
-    public function test_get_activities_count() {
+    public function test_get_activities_count(): void {
         // Test when no activities are created.
         $activitycount = $this->main->get_activities_count();
         $this->assertEquals(0, $activitycount);
@@ -87,8 +92,9 @@ class main_test extends \advanced_testcase {
     }
     /**
      * Ensures get_disk_usage() returns correct data
+     * @return void
      */
-    public function test_get_disk_usage() {
+    public function test_get_disk_usage(): void {
         global $CFG;
         // Test when the diskusage scheduled task is not run.
         $diskusage = $this->main->get_disk_usage();

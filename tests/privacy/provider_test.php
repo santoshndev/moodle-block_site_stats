@@ -25,11 +25,11 @@ use advanced_testcase;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @covers \block_site_stats\privacy\provider
  */
-class provider_test extends advanced_testcase {
+final class provider_test extends advanced_testcase {
     /**
      * Ensures test_get_reason() returns correct data
      */
-    public function test_get_reason() {
+    public function test_get_reason(): void {
         $this->resetAfterTest();
         $this->setAdminUser();
         $privacy = new provider();
