@@ -34,3 +34,4 @@ $string['site_stats:view'] = 'View Site Statistics block content';
 $string['users'] = 'Users';
 $string['sizemb'] = ' MB';
 $string['sizegb'] = ' GB';
+
