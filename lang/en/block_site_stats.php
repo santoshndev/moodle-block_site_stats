@@ -31,7 +31,6 @@ $string['pluginname'] = 'Site Statistics';
 $string['privacy:metadata'] = 'The Site Statistics block only shows data stored in other locations.';
 $string['site_stats:myaddinstance'] = 'Add a new Site Statistics block to Dashboard';
 $string['site_stats:view'] = 'View Site Statistics block content';
-$string['users'] = 'Users';
-$string['sizemb'] = ' MB';
 $string['sizegb'] = ' GB';
-
+$string['sizemb'] = ' MB';
+$string['users'] = 'Users';
