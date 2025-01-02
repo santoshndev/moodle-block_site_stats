@@ -94,12 +94,7 @@ class main implements \templatable, \renderable {
             return get_string('notcalculated', 'block_site_stats');
         }
 
-        $unit = get_string('sizemb', 'block_site_stats');
-        if ($diskusagecache > 1024) {
-            $unit = get_string('sizegb', 'block_site_stats');
-        }
-
-        return $diskusagecache . $unit;
+        return $diskusagecache;
     }
     /**
      * Export the data for template

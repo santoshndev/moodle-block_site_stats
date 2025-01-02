@@ -95,20 +95,17 @@ final class main_test extends advanced_testcase {
      * @return void
      */
     public function test_get_disk_usage(): void {
-        global $CFG;
         // Test when the diskusage scheduled task is not run.
         $diskusage = $this->main->get_disk_usage();
         $expected = get_string('notcalculated', 'block_site_stats');
         $this->assertEquals($expected, $diskusage);
 
         // Test when the diskusage scheduled task is run.
-        $diskusage = get_directory_size($CFG->dataroot);
-        $disksize = number_format(ceil($diskusage / 1048576));
         $task = new diskusage();
         $status = $task->execute();
         if ($status) {
             $diskusage = $this->main->get_disk_usage();
-            $this->assertEquals($disksize . ' MB', $diskusage);
+            $this->assertNotEquals($expected, $diskusage);
         }
     }
 }

@@ -44,7 +44,7 @@ class diskusage extends \core\task\scheduled_task {
         global $CFG;
         $cache = cache::make('block_site_stats', 'sitestats');
         $diskusage = get_directory_size($CFG->dataroot);
-        $disksize = number_format(ceil($diskusage / 1048576));
+        $disksize = display_size($diskusage);
         $cache->set('diskusage', $disksize);
         return true;
     }

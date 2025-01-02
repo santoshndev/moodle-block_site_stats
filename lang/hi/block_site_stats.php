@@ -31,6 +31,4 @@ $string['pluginname'] = 'साइट आँकड़े';
 $string['privacy:metadata'] = 'साइट आँकड़े ब्लॉक केवल अन्य स्थानों में संग्रहित डेटा दिखाता है।';
 $string['site_stats:myaddinstance'] = 'डैशबोर्ड पर नया साइट आँकड़ा ब्लॉक जोड़ें';
 $string['site_stats:view'] = 'साइट आँकड़े ब्लॉक की सामग्री देखें';
-$string['sizegb'] = ' जीबी';
-$string['sizemb'] = ' एमबी';
 $string['users'] = 'उपयोगकर्ता';
