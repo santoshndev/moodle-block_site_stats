@@ -23,7 +23,7 @@ use block_site_stats\task\diskusage;
  *
  * @package    block_site_stats
  * @category   test
- * @copyright  2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
+ * @copyright  2025 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @covers \block_site_stats\output\main
  */
@@ -38,6 +38,7 @@ final class main_test extends advanced_testcase {
      * @return void
      */
     public function setUp(): void {
+        parent::setUp();
         $this->resetAfterTest();
         $this->setAdminUser();
         $this->main = new main();

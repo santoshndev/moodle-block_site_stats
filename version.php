@@ -18,14 +18,14 @@
  * Version details
  *
  * @package    block_site_stats
- * @copyright  2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
+ * @copyright  2025 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2024050404;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->release = '1.0.2';
+$plugin->version   = 2025042100;        // The current plugin version (Date: YYYYMMDDXX).
+$plugin->release = '1.0.3';
 $plugin->requires  = 2022111800;        // Requires this Moodle version.
 $plugin->component = 'block_site_stats'; // Full name of the plugin (used for diagnostics).
 $plugin->maturity = MATURITY_STABLE;

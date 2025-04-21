@@ -21,7 +21,7 @@ use cache;
  * Calculates the disk usage
  *
  * @package   block_site_stats
- * @copyright 2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
+ * @copyright 2025 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class diskusage extends \core\task\scheduled_task {

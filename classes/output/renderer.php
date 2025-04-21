@@ -21,7 +21,7 @@ use plugin_renderer_base;
  * site stats block renderer
  *
  * @package    block_site_stats
- * @copyright  2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
+ * @copyright  2025 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class renderer extends plugin_renderer_base {
