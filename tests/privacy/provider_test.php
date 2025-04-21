@@ -22,7 +22,7 @@ use advanced_testcase;
  *
  * @package    block_site_stats
  * @category   test
- * @copyright  2024 Santosh Nagargoje <santosh.nag2217@gmail.com>
+ * @copyright  2025 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  * @covers \block_site_stats\privacy\provider
  */
