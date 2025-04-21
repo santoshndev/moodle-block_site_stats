@@ -9,8 +9,17 @@ This block provides shortcuts to user management, course management and activity
 
 This block comes with English, Marathi and Hindi language strings.
 
-# #Author
+# How to use
+1. Login as an administrator.
+2. Go to Dashboard page.
+3. Turn Editing on
+4. Click on Add a block
+5. Select Site Statistics from the list
+6. Check block added on Dashboard page
+**Note**: In order to get the disk usage value, the **Calculate Disk Usage** task should be executed. By default, it's scheduled on midnight every day but you are free to reschedule it as per your requirement.
 
-Author: Santosh Nagargoje
+# Author
+
+Santosh Nagargoje
 
 Web profile: https://santoshnagargoje.in/
