@@ -61,7 +61,6 @@ final class site_stats_test extends advanced_testcase {
         $page->set_pagelayout('frontpage');
 
         $this->assertFalse($block->can_block_be_added($page));
-
     }
     /**
      * Test the behaviour of can_block_be_added() method.

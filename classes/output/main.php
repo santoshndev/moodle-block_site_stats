@@ -26,7 +26,7 @@ use context_system;
  * @copyright  2025 Santosh Nagargoje <santosh.nag2217@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class main implements \templatable, \renderable {
+class main implements \renderable, \templatable {
     /**
      * Assign cache instance
      * @var cache_application|cache_session|cache_store Cache instance
@@ -118,5 +118,4 @@ class main implements \templatable, \renderable {
         ];
         return $templatecontext;
     }
-
 }

@@ -25,7 +25,6 @@ use cache;
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class diskusage extends \core\task\scheduled_task {
-
     /**
      * Return the task's name as shown in admin screens.
      *
