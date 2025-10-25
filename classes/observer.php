@@ -25,7 +25,6 @@ use cache;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class observer {
-
     /**
      * Clears userscount cache on user_created event
      * @param \core\event\user_created $event event object
